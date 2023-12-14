@@ -24,11 +24,15 @@ public class FarmManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moneyTxt.text = "$" + money;
+       moneyTxt.text = "$" + money;
     }
 
+    public Color GetBuyColor()
+    {
+        return buyColor;
+    }
 
-    public void SelectPlant(PlantItem newPlant)
+    public void SelectPlant(PlantItem newPlant, Color buyColor)
     {
         if(selectPlant == newPlant)
         {
@@ -36,7 +40,7 @@ public class FarmManager : MonoBehaviour
             CheckSelection();
 
             selectPlant.btnImage.color = buyColor;
-            selectPlant.btnTxt.text = "buy"; 
+            selectPlant.btnTxt.text = "Buy"; 
             selectPlant = null;
             isPlanting = false;
 
@@ -50,7 +54,7 @@ public class FarmManager : MonoBehaviour
             if (selectPlant != null) 
             {
                 selectPlant.btnImage.color = buyColor;
-                selectPlant.btnTxt.text = "buy";
+                selectPlant.btnTxt.text = "Buy";
             }
 
 
@@ -85,7 +89,7 @@ public class FarmManager : MonoBehaviour
             if (selectPlant != null)
             {
                 selectPlant.btnImage.color = buyColor;
-                selectPlant.btnTxt.text = "buy";
+                selectPlant.btnTxt.text = "Buy";
                 selectPlant = null;
             }
         }

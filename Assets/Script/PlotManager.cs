@@ -53,9 +53,9 @@ public class Plotmanage : MonoBehaviour
             {
                 Harvest();
             }
-            
+
         }
-        else if(fm.isPlanting && fm.selectPlant.plant.buyPrice <= fm.money)
+        else if (fm.isPlanting && fm.selectPlant.plant.buyPrice <= fm.money)
         {
             Plant(fm.selectPlant.plant);
         }
@@ -66,7 +66,7 @@ public class Plotmanage : MonoBehaviour
     {
         if (fm.isPlanting)
         {
-            if(isPlanted || fm.selectPlant.plant.buyPrice > fm.money)
+            if (isPlanted || fm.selectPlant.plant.buyPrice > fm.money)
             {
                 plot.color = unavilableColor;
             }
@@ -104,7 +104,7 @@ public class Plotmanage : MonoBehaviour
     {
         plant.sprite = selectPlant.plantStages[plantStage];
     }
-   
+
 
 
 }

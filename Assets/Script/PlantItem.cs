@@ -16,9 +16,10 @@ public class PlantItem : MonoBehaviour
     public Text btnTxt;
 
     FarmManager fm;
-    
+
 
     // Start is called before the first frame update
+    [System.Obsolete]
     void Start()
     {
 
@@ -29,7 +30,7 @@ public class PlantItem : MonoBehaviour
     public void BuyPlant()
     {
         Debug.Log("Bought" + plant.plantName);
-        fm.SelectPlant(this);
+        fm.SelectPlant(this, fm.GetBuyColor());
     }
 
     void InitializeUI()

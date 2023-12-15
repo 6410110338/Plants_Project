@@ -1,11 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlantItem : MonoBehaviour
 {
-
     public PlantObject plant;
 
     public Text nameTxt;
@@ -17,19 +16,18 @@ public class PlantItem : MonoBehaviour
 
     FarmManager fm;
 
-
     // Start is called before the first frame update
     [System.Obsolete]
     void Start()
     {
-
+        // เปลี่ยนจาก FindObjectOfType เป็น GetComponentInChildren
         fm = FindObjectOfType<FarmManager>();
         InitializeUI();
     }
 
     public void BuyPlant()
     {
-        Debug.Log("Bought" + plant.plantName);
+        Debug.Log("Bought " + plant.plantName);
         fm.SelectPlant(this, fm.GetBuyColor());
     }
 
@@ -39,5 +37,4 @@ public class PlantItem : MonoBehaviour
         priceTxt.text = "$" + plant.buyPrice;
         icon.sprite = plant.icon;
     }
-    
 }

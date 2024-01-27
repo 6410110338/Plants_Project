@@ -232,7 +232,7 @@ TextureImporter:
       name: Farm Items Extra_5
       rect:
         serializedVersion: 2
-        x: 360
+        x: 361
         y: 41
         width: 340
         height: 170
@@ -253,7 +253,7 @@ TextureImporter:
       name: Farm Items Extra_6
       rect:
         serializedVersion: 2
-        x: 880
+        x: 881
         y: 52
         width: 140
         height: 180
